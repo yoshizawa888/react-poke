@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { StyleSheetManager } from 'styled-components';
+import styled from 'styled-components';
 
 import { useNavigate } from 'react-router-dom';
 
@@ -7,7 +7,6 @@ import { useAppSelector } from '../../app/hooks';
 import { selectPokemon } from '../../app/slices/PokemonSlice';
 
 import { PokemonDetail } from '../../utils/type';
-import isPropValid from '@emotion/is-prop-valid';
 import Card from '../molecules/Card';
 
 const Wrap = styled.div`
