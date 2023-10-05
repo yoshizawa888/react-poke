@@ -11,9 +11,7 @@ type Props = {
 
 const Wrap = styled.div``;
 
-const Text = styled(NomalText)`
-	width: 100px;
-`;
+const Text = styled(NomalText)``;
 
 const Stats: React.FC<Props> = ({ children, className, value }) => {
 	return (

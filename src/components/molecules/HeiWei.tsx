@@ -10,7 +10,7 @@ type Props = {
 
 const Wrap = styled.div``;
 
-const Status: React.FC<Props> = ({ className, height, weight }) => {
+const HeiWei: React.FC<Props> = ({ className, height, weight }) => {
 	return (
 		<Wrap className={className}>
 			<NomalText>高さ：{height} m</NomalText>
@@ -19,4 +19,4 @@ const Status: React.FC<Props> = ({ className, height, weight }) => {
 	);
 };
 
-export default Status;
+export default HeiWei;

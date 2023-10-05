@@ -17,9 +17,10 @@ const Text = styled(NomalText)`
 	margin-right: 10px;
 `;
 
-const Stats: React.FC<Props> = ({ className, value }) => {
+const Types: React.FC<Props> = ({ className, value }) => {
 	return (
 		<Wrap className={className}>
+			<Text>タイプ：</Text>
 			{value.map((val) => {
 				return <Text key={val}>{val}</Text>;
 			})}
@@ -27,4 +28,4 @@ const Stats: React.FC<Props> = ({ className, value }) => {
 	);
 };
 
-export default Stats;
+export default Types;

@@ -7,7 +7,7 @@ type Props = {
 };
 
 const Text = styled.p`
-	font-size: 1.6rem;
+	font-size: 2rem;
 	line-height: 1.7em;
 `;
 

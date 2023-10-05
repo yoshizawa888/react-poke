@@ -17,11 +17,15 @@ const Wrap = styled.div`
 	flex-direction: column;
 `;
 
+const Text = styled(LargeText)`
+	margin-top: 25px;
+`;
+
 const Status: React.FC<Props> = ({ className, children, src, alt }) => {
 	return (
 		<Wrap className={className}>
 			<DetailImage src={src} alt={alt} />
-			<LargeText>{children}</LargeText>
+			<Text>{children}</Text>
 		</Wrap>
 	);
 };

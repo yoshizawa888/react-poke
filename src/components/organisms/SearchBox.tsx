@@ -5,7 +5,7 @@ import Search from '../molecules/Search';
 import pokemonLang from '../../utils/pokemon.json';
 
 const Wrap = styled.div`
-	margin: 0 0 20px;
+	margin: 0 0 50px;
 `;
 
 const SearchItem = styled(Search)``;
@@ -13,6 +13,7 @@ const SearchItem = styled(Search)``;
 const Error = styled.div`
 	margin: 10px 0 0;
 	color: red;
+	text-align: center;
 `;
 const SearchBox: React.FC = () => {
 	const [pokeName, setPokeName] = useState('');
@@ -25,7 +26,6 @@ const SearchBox: React.FC = () => {
 		const foundItem = pokemonLang.find((item) => item.ja === inputValue);
 
 		if (foundItem && foundItem.en) {
-			console.log(foundItem);
 			setPokeName(foundItem.en.toLowerCase());
 			setNameChack(true);
 			setErrorChack(true);
@@ -35,9 +35,8 @@ const SearchBox: React.FC = () => {
 		}
 	};
 	const clickHandler = (name: string) => {
-		console.log(nameChack);
 		if (nameChack) {
-			navigate(`/detail/${name}`);
+			navigate(`/react-poke/detail/${name}`);
 			setErrorChack(true);
 		} else {
 			setErrorChack(false);

@@ -26,24 +26,12 @@ const Top: React.FC = () => {
 		}
 	}, [dispatch, pokemonData.detail]);
 
-	const clickPoke = async () => {
-		console.log(pokemonData);
-	};
 	return (
 		<>
-			<button onClick={clickPoke}>ボタン</button>
+			{/* 
 			<p>{pokemonData.status}</p>
-			<p>{pokemonData.status2}</p>
+			<p>{pokemonData.status2}</p> */}
 			<MainContents />
-			{/* <div>
-				{pokemonData.detail.map((detail: PokemonDetail, index: number) => (
-					<Card
-						key={detail.name}
-						detail={detail}
-						name={pokemonData.lang[index]}
-					/>
-				))}
-			</div> */}
 		</>
 	);
 };

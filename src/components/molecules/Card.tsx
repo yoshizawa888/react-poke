@@ -22,6 +22,11 @@ const CardWrap = styled.div`
 	border-radius: 20px;
 	box-shadow: 0 0 10px #222;
 	cursor: pointer;
+	transition: all 0.3s;
+	&:hover {
+		box-shadow: 0 3px 10px #222;
+		transform: translateY(-3px);
+	}
 `;
 const Text = styled(CardText)`
 	margin: 20px 0 0;

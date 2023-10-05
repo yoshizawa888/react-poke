@@ -9,7 +9,7 @@ type Props = {
 const Input = styled.input.attrs({
 	type: 'text',
 })`
-	padding: 0.5rem;
+	padding: 0.5em;
 	font-size: 2.4rem;
 	line-height: 1rem;
 	border-radius: 20px;

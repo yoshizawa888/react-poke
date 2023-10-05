@@ -15,7 +15,6 @@ const getPokemonLang = createAsyncThunk(
 				return responseData;
 			})
 		);
-		console.log(detailData);
 		return detailData;
 	}
 );

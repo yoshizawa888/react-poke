@@ -28,10 +28,10 @@ const CardItem = styled(Card)`
 
 const CardList: React.FC = () => {
 	const pokemonData = useAppSelector(selectPokemon);
-	console.log(pokemonData);
+	// console.log(pokemonData);
 	const navigate = useNavigate();
 	const clickHandler = (id: number) => {
-		navigate(`/detail/${id}`);
+		navigate(`/react-poke/detail/${id}`);
 	};
 
 	return (

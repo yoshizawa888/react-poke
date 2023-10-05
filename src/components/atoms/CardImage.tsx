@@ -9,6 +9,7 @@ type Props = {
 
 const Image = styled.div<Props>`
 	height: 26vw;
+	max-height: 300px;
 	background-size: contain;
 	${(props) =>
 		props.src &&
