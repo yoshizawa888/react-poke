@@ -6,11 +6,13 @@ const getPokemonLangDetail = createAsyncThunk(
 	'pokemon/getPokemonLangDetail',
 	async (payload: PokemonSingleDetail) => {
 		const url = payload.species.url;
-		const response = await axios.get(url);
-		const responseData = response.data.names.find(
-			(name: PokemonDetailLang) => name.language.name === 'ja'
-		).name;
-		return responseData;
+		if (url != '') {
+			const response = await axios.get(url);
+			const responseData = response.data.names.find(
+				(name: PokemonDetailLang) => name.language.name === 'ja'
+			).name;
+			return responseData;
+		}
 	}
 );
 

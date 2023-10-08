@@ -4,6 +4,7 @@ import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { selectPokemon } from '../app/slices/PokemonSlice';
 import getPokemonSingle from '../app/reducers/getPokemonSingle';
 import getPokemonTypeLang from '../app/reducers/getPokemonTypeLang';
+import getPokemonLangDitail from '../app/reducers/getPokemonLangDitail';
 import DetailContents from '../components/templates/DetailContents';
 const Detail: React.FC = () => {
 	const params = useParams();
@@ -16,6 +17,7 @@ const Detail: React.FC = () => {
 
 	useEffect(() => {
 		dispatch(getPokemonTypeLang(pokemonData.singleDetail));
+		dispatch(getPokemonLangDitail(pokemonData.singleDetail));
 	}, [dispatch, pokemonData.singleDetail]);
 
 	return <DetailContents />;

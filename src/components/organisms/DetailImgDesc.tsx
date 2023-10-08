@@ -1,9 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
+import { useAppSelector } from '../../app/hooks';
 import { selectPokemon } from '../../app/slices/PokemonSlice';
-import getPokemonLangDitail from '../../app/reducers/getPokemonLangDitail';
 import ImgText from '../molecules/ImgText';
 import HeiWei from '../molecules/HeiWei';
 import Types from '../molecules/Types';
@@ -21,12 +19,7 @@ const HeiWeiBox = styled(HeiWei)`
 `;
 
 const DetailImgDesc: React.FC = () => {
-	const dispatch = useAppDispatch();
 	const res = useAppSelector(selectPokemon);
-	useEffect(() => {
-		dispatch(getPokemonLangDitail(res.singleDetail));
-	}, [dispatch, res.singleDetail]);
-
 	return (
 		<>
 			{res.singleDetail.sprites && (
